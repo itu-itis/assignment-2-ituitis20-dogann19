@@ -165,3 +165,9 @@ color: SlateGray;
 		   float: left;
 		   width: 33.33%;
 	   }
+  .column {
+  background-color: white;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  }
