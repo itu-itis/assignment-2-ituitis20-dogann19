@@ -68,7 +68,7 @@ clear: both;
 
   .rightcolumn {
   background-color: white;
-padding-top: 5px;
+padding: 5px;
    padding-left: 10px;
    float: right;
    width: 75%;
