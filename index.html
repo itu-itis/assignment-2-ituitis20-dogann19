@@ -154,6 +154,7 @@
 			</aside>
 			
 		</div>
+		
 		<div id="academic">
 			<table style="width: 100%; margin: auto;">
 				<tr style="background-color: OrangeRed; color: white;">
@@ -429,6 +430,7 @@
 				<p>This website was prepared for only BLG101 course</p>
 			</footer>
 		</div>
+		
 		<div id="about">
 			<section class="column">
  
@@ -447,6 +449,7 @@
 				<p>This website was prepared for only BLG101 course</p>
 			</footer>
 		</div>
+		
 		<div id="contact">
 			<section class="column">
 				<h5>Social Media Addresses of Beşiktaş Anatolian High School and E-mail Address to Contact with the Author</h5>
@@ -464,7 +467,12 @@
 			</footer>
 		</div>
 		
-		<form action="index.html" autocomplete="off"><!-- off otomatik olarak doldurmaması için-->
+		<!-- index page begins from here -->
+		
+		<button class="button" onclick="document.getElementById('teacherform').style.display='block'">ADD TEACHER</button>
+		<button class="button" onclick="document.getElementById('sportsform').style.display='block'">ADD TEAM</button>
+		
+		<form id="teacherform" autocomplete="off"><!-- off otomatik olarak doldurmaması için-->
 			<label for="subject">Subject: </label>
 			<input type="text" id="subject" name="subject">
 			<label for="name">Teacher Name: </label>
@@ -479,7 +487,7 @@
 			<input class="button"type="submit" value="ADD">
 		</form>
 		
-		<form action="index.html" autocomplete="off">
+		<form id="sportsform"autocomplete="off">
 		
 		<label for="sports">Sports Type: </label>
 		<select id="sports">

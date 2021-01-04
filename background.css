@@ -180,6 +180,7 @@ color: SlateGray;
   font-style:none;
   margin-left:50px;
   margin-top:80px;
+  display:none;
   }
   .button{
   border-style:solid;
