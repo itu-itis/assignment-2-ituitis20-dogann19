@@ -184,11 +184,16 @@ color: SlateGray;
   }
   .button{
   border-style:solid;
-  border-color:black;
+  border-color:dimgrey;
   border-width:2px;
-  background-color: grey;
+  background-color: CornflowerBlue;
   color:white;
   font-size:20px;
   margin-left:80px;
   padding:8px, 12px,8px,12px;
+  }
+  caption{
+  margin-top:20px;
+  font-size: 35px;
+  color:MidnightBlue;
   }
