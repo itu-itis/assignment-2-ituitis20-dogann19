@@ -39,6 +39,77 @@
 			<a href="#about">ABOUT ME</a>
 		</nav>
 		
+		<script>
+			const subject = document.querySelector("#subject");
+			const name = document.querySelector("#name");
+			const cluster = document.querySelector("#cluster");
+			const hocaekle = document.querySelector("#hocaekle");
+			const teachertable = document.querySelector("#teachertable");
+			
+			const sports = document.querySelector("#sports");
+			const teamname = document.querySelector("#teamname");
+			const sportstable = document.querySelector("#sportstable");
+			const takımekle = document.querySelector("#takımekle");
+		
+		</script>
+				
+		<!-- index page begins from here -->
+		<div id="ass2">
+		<table id="teachertable" style="margin:auto; width:100%">
+			<caption>TEACHERS </caption>
+			<tr style="background-color:LightPink; color:black;">
+				<th>Subject</th>
+				<th>Teacher Name</th>
+				<th>Cluster</th>
+			</tr>
+		</table>
+		
+		<table id="sportstable" style="margin:auto; width:100%">
+			<caption>SPORTS TEAM </caption>
+			<tr style="background-color:LightPink; color:black;">
+				<th>Sports Type</th>
+				<th>Team Name</th>
+			</tr>
+		</table>
+		
+		<button class="button" onclick="document.getElementById('teacherform').style.display='block'">ADD TEACHER</button>
+		<button class="button" onclick="document.getElementById('sportsform').style.display='block'">ADD TEAM</button>
+		
+		<div id="teacherform" class=".form">
+			
+			<label for="subject">Subject: </label>
+			<input type="text" id="subject" name="subject">
+			<label for="name">Teacher Name: </label>
+			<input type="text" id="name" name="name">
+			<label for="cluster">Cluster: </label>
+			<select id="cluster">
+				<option value="say">SAY</option>
+				<option value="söz">SÖZ</option>
+				<option value="ea">EA</option>
+				<option value="dil">DİL</option>
+			</select>
+			
+			<button class="button" id="hocaekle" onclick="document.getElementById('teacherform').style.display='none' " value="ADD">ADD</button>
+		</div>
+		
+		<div id="sportsform" class="form">
+		
+		<label for="sports">Sports Type: </label>
+		<select id="sports">
+			<option value="football">Football</option>
+			<option value="volleyball">Volleyball</option>
+			<option value="sailing">Sailing</option>
+			<option value="basketball">Basketball</option>
+		</select>
+		<label for="teamname">Team Name: </label>
+		<input type="text" id="teamname" name="teamname">
+		
+		<button class="button" id="takımekle" value="ADD" onclick="document.getElementById('sportsform').style.display='none' ">ADD</button>
+		
+		</div>
+		
+		</div>
+		
 		<div id="home">
 			<aside class="leftcolumn">
 				<h4 style=" padding: 10px; margin: 20px; color: MidnightBlue; font-size: 20px;"> OVERVIEW</h4>
@@ -467,59 +538,7 @@
 				<p>This website was prepared for only BLG101 course</p>
 			</footer>
 		</div>
-		
-		<!-- index page begins from here -->
-		<div id="ass2">
-		<table style="margin:auto; width:100%">
-			<caption>TEACHERS </caption>
-			<tr style="background-color:LightPink; color:black;">
-				<th>Subject</th>
-				<th>Teacher Name</th>
-				<th>Cluster</th>
-			</tr>
-		</table>
-		
-		<table style="margin:auto; width:100%">
-			<caption>SPORTS TEAM </caption>
-			<tr style="background-color:LightPink; color:black;">
-				<th>Sports Type</th>
-				<th>Team Name</th>
-			</tr>
-		</table>
-		
-		<button class="button" onclick="document.getElementById('teacherform').style.display='block'">ADD TEACHER</button>
-		<button class="button" onclick="document.getElementById('sportsform').style.display='block'">ADD TEAM</button>
-		
-		<form id="teacherform" autocomplete="off" method="post"><!-- off otomatik olarak doldurmaması için-->
-			<label for="subject">Subject: </label>
-			<input type="text" id="subject" name="subject">
-			<label for="name">Teacher Name: </label>
-			<input type="text" id="name" name="name">
-			<label for="cluster">Cluster: </label>
-			<select id="cluster">
-				<option value="say">SAY</option>
-				<option value="söz">SÖZ</option>
-				<option value="ea">EA</option>
-				<option value="dil">DİL</option>
-			</select>
-			<button class="button" type="submit" form="teacherform" value="ADD">ADD</button>
-		</form>
-		
-		<form id="sportsform" autocomplete="off" method="post">
-		
-		<label for="sports">Sports Type: </label>
-		<select id="sports">
-			<option value="football">Football</option>
-			<option value="volleyball">Volleyball</option>
-			<option value="sailing">Sailing</option>
-			<option value="basketball">Basketball</option>
-		</select>
-		<label for="teamname">Team Name: </label>
-		<input type="text" id="teamname" name="teamname">
-		
-		<button class="button" type="submit" form="sportsform" value="ADD">ADD</button>
-		</form>
-		</div>
+
 	</body>
 
 </html>
