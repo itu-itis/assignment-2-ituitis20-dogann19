@@ -39,49 +39,6 @@
 			<a href="#about">ABOUT ME</a>
 		</nav>
 				
-		<script>
-			const subject=document.querySelector("#subject");
-			const name=document.querySelector("#name");
-			const cluster=document.querySelector("#cluster");
-			const hocaekle=document.querySelector("#hocaekle");
-			const teachertable=querySelector("#teachertable");
-			
-			const sports = document.querySelector("#sports");
-			const teamname = document.querySelector("#teamname");
-			const sportstable = document.querySelector("#sportstable");
-			const takimekle = document.querySelector("#takimekle");
-			
-			hocaekle.onclick=function(){
-				
-				let tSubject=document.createElement("td");
-				let tName=document.createElement("td");
-				let tCluster=document.createElement("td");
-				
-				tSubject.textContent=subject.value;
-				tName.textContent=name.value;
-				tCluster.textContent=cluster.value;
-				
-				let tTeacher=document.createElement("tr");
-				
-				tTeacher.appendChild(tSubject);
-				tTeacher.appendChild(tName);
-				tTeacher.appendChild(tCluster);
-				
-				teachertable.appendChild(tTeacher);
-				
-				name.value="";
-				subject.value="";
-				cluster.value="";
-				}
-			
-			takımekle.onclick = function(){
-				let tdSports = document.createElement("td");
-				let tdTeamName = document.createElement("td");
-				
-				let trTeam = document.createElement("tr");
-				}
-		
-		</script>
 		
 				
 		<!-- index page begins from here -->
@@ -120,7 +77,7 @@
 				<option value="dil">DİL</option>
 			</select>
 			
-			<button class="button" id="hocaekle" onclick="document.getElementById('teacherform').style.display='none' ">ADD</button>
+			<button class="button" id="hocaekle" >ADD</button>
 		</div>
 		
 		<div id="sportsform" class="form">
@@ -135,11 +92,71 @@
 		<label>Team Name: </label>
 		<input type="text" id="teamname">
 		
-		<button class="button" id="takimekle" onclick="document.getElementById('sportsform').style.display='none' ">ADD</button>
+		<button class="button" id="takimekle" >ADD</button>
 		
 		</div>
 
 		</div>
+		
+		<script>
+          const subject=document.querySelector("#subject");
+          const name=document.querySelector("#name");
+          const cluster=document.querySelector("#cluster");
+          const hocaekle=document.querySelector("#hocaekle");
+          const teachertable=document.querySelector("#teachertable");
+
+          const sports=document.getElementById("sports");
+          const teamname=document.getElementById("teamname");
+          const takımekle=document.getElementById("takımekle");
+          const sportstable=document.getElementById("sportstable");
+
+          hocaekle.onclick=function(){
+
+            let tSubject=document.createElement("td");
+            let tName=document.createElement("td");
+            let tCluster=document.createElement("td");
+
+            tSubject.textContent=subject.value;
+            tName.textContent=name.value;
+            tCluster.textContent=cluster.value;
+
+            let tr=document.createElement("tr");
+
+            tr.appendChild(tSubject);
+            tr.appendChild(tName);
+            tr.appendChild(tCluster);
+
+            teachertable.appendChild(tr);
+
+            name.value="";
+            subject.value="";
+            cluster.value="";
+            
+            document.getElementById("teacherform").style.display="none";
+          }
+          
+          takimekle.onclick=function(){
+
+            let tSports=document.createElement("td");
+            let tTeamName=document.createElement("td");
+
+            tSports.textContent=sports.value;
+            tTeamName.textContent=teamname.value;
+           
+            let tr2=document.createElement("tr");
+
+            tr2.appendChild(tSports);
+            tr2.appendChild(tTeamName);
+
+            sportstable.appendChild(tr2);
+
+            sports.value="";
+            teamname.value="";
+            
+            document.getElementById("sportsform").style.display="none";
+          }
+          
+        </script>
 		
 		<div id="home">
 			<aside class="leftcolumn">
