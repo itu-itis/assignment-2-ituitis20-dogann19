@@ -40,16 +40,32 @@
 		</nav>
 		
 		<script>
-			const subject = document.querySelector("#subject");
-			const name = document.querySelector("#name");
-			const cluster = document.querySelector("#cluster");
-			const hocaekle = document.querySelector("#hocaekle");
-			const teachertable = document.querySelector("#teachertable");
+			const subject = document.getElemetById("subject");
+			const name = document.getElemetById("name");
+			const cluster = document.getElemetById("cluster");
+			const hocaekle = document.getElemetById("hocaekle");
+			const teachertable = document.getElemetById("teachertable");
 			
-			const sports = document.querySelector("#sports");
-			const teamname = document.querySelector("#teamname");
-			const sportstable = document.querySelector("#sportstable");
-			const takımekle = document.querySelector("#takımekle");
+			const sports = document.getElemetById("sports");
+			const teamname = document.getElemetById("teamname");
+			const sportstable = document.getElemetById("sportstable");
+			const takımekle = document.getElemetById("takımekle");
+			
+			hocaekle.onclick = function(){
+				<!--td eklemek için-->
+				let tdSubject = document.createElement("td");
+				let tdName = document.createElement("td");
+				let tdCluster = document.createElement("td");
+				
+				let trTeacher = document.createElement("tr")
+				}
+			
+			takımekle.onclick = fınction(){
+				let tdSports = document.createElement("td");
+				let tdTeamName = document.createElement("td");
+				
+				let trTeam = document.createElement("tr")
+				}
 		
 		</script>
 				
@@ -75,7 +91,7 @@
 		<button class="button" onclick="document.getElementById('teacherform').style.display='block'">ADD TEACHER</button>
 		<button class="button" onclick="document.getElementById('sportsform').style.display='block'">ADD TEAM</button>
 		
-		<div id="teacherform" class=".form">
+		<div id="teacherform" class="form">
 			
 			<label for="subject">Subject: </label>
 			<input type="text" id="subject" name="subject">
