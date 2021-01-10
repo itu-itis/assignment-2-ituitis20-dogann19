@@ -38,36 +38,51 @@
 			<a href="#contact">SOCIAL MEDIA</a>
 			<a href="#about">ABOUT ME</a>
 		</nav>
-		
-		<script>
-			const subject = document.getElemetById("subject");
-			const name = document.getElemetById("name");
-			const cluster = document.getElemetById("cluster");
-			const hocaekle = document.getElemetById("hocaekle");
-			const teachertable = document.getElemetById("teachertable");
-			
-			const sports = document.getElemetById("sports");
-			const teamname = document.getElemetById("teamname");
-			const sportstable = document.getElemetById("sportstable");
-			const takımekle = document.getElemetById("takımekle");
-			
-			hocaekle.onclick = function(){
-				<!--td eklemek için-->
-				let tdSubject = document.createElement("td");
-				let tdName = document.createElement("td");
-				let tdCluster = document.createElement("td");
 				
-				let trTeacher = document.createElement("tr")
+		<script>
+			const subject=document.querySelector("#subject");
+			const name=document.querySelector("#name");
+			const cluster=document.querySelector("#cluster");
+			const hocaekle=document.querySelector("#hocaekle");
+			const teachertable=querySelector("#teachertable");
+			
+			const sports = document.querySelector("#sports");
+			const teamname = document.querySelector("#teamname");
+			const sportstable = document.querySelector("#sportstable");
+			const takimekle = document.querySelector("#takimekle");
+			
+			hocaekle.onclick=function(){
+				
+				let tSubject=document.createElement("td");
+				let tName=document.createElement("td");
+				let tCluster=document.createElement("td");
+				
+				tSubject.textContent=subject.value;
+				tName.textContent=name.value;
+				tCluster.textContent=cluster.value;
+				
+				let tTeacher=document.createElement("tr");
+				
+				tTeacher.appendChild(tSubject);
+				tTeacher.appendChild(tName);
+				tTeacher.appendChild(tCluster);
+				
+				teachertable.appendChild(tTeacher);
+				
+				name.value="";
+				subject.value="";
+				cluster.value="";
 				}
 			
-			takımekle.onclick = fınction(){
+			takımekle.onclick = function(){
 				let tdSports = document.createElement("td");
 				let tdTeamName = document.createElement("td");
 				
-				let trTeam = document.createElement("tr")
+				let trTeam = document.createElement("tr");
 				}
 		
 		</script>
+		
 				
 		<!-- index page begins from here -->
 		<div id="ass2">
@@ -93,11 +108,11 @@
 		
 		<div id="teacherform" class="form">
 			
-			<label for="subject">Subject: </label>
-			<input type="text" id="subject" name="subject">
-			<label for="name">Teacher Name: </label>
-			<input type="text" id="name" name="name">
-			<label for="cluster">Cluster: </label>
+			<label>Subject: </label>
+			<input type="text" id="subject">
+			<label>Teacher Name: </label>
+			<input type="text" id="name">
+			<label>Cluster: </label>
 			<select id="cluster">
 				<option value="say">SAY</option>
 				<option value="söz">SÖZ</option>
@@ -105,25 +120,25 @@
 				<option value="dil">DİL</option>
 			</select>
 			
-			<button class="button" id="hocaekle" onclick="document.getElementById('teacherform').style.display='none' " value="ADD">ADD</button>
+			<button class="button" id="hocaekle" onclick="document.getElementById('teacherform').style.display='none' ">ADD</button>
 		</div>
 		
 		<div id="sportsform" class="form">
 		
-		<label for="sports">Sports Type: </label>
+		<label>Sports Type: </label>
 		<select id="sports">
 			<option value="football">Football</option>
 			<option value="volleyball">Volleyball</option>
 			<option value="sailing">Sailing</option>
 			<option value="basketball">Basketball</option>
 		</select>
-		<label for="teamname">Team Name: </label>
-		<input type="text" id="teamname" name="teamname">
+		<label>Team Name: </label>
+		<input type="text" id="teamname">
 		
-		<button class="button" id="takımekle" value="ADD" onclick="document.getElementById('sportsform').style.display='none' ">ADD</button>
+		<button class="button" id="takimekle" onclick="document.getElementById('sportsform').style.display='none' ">ADD</button>
 		
 		</div>
-		
+
 		</div>
 		
 		<div id="home">
