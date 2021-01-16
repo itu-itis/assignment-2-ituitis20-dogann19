@@ -54,6 +54,7 @@ display: block;
 color: #f2f2f2;
 text-align: center;
 padding: 14px 20px;
+text-decoration: none;
 }
 nav a:active {
 background-color: #f2f2f2;
@@ -195,5 +196,6 @@ color: black;
   caption{
   margin-top:20px;
   font-size: 35px;
-  color:MidnightBlue;
+  color: DarkGreen;
+
   }
