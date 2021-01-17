@@ -67,17 +67,17 @@
 			</tr>
 		</table>
 		
-		<button class="button" onclick="document.getElementById('teacherform').style.display='block', document.getElementById('sportsform').style.display='none'">ADD TEACHER</button>
-		<button class="button" onclick="document.getElementById('sportsform').style.display='block', document.getElementById('teacherform').style.display='none'">ADD TEAM</button>
+		<button class="button" ondblclick="document.getElementById('teacherform').style.display='none'" onclick="document.getElementById('teacherform').style.display='block', document.getElementById('sportsform').style.display='none'">ADD TEACHER</button>
+		<button class="button" ondblclick="document.getElementById('sportsform').style.display='none'" onclick="document.getElementById('sportsform').style.display='block', document.getElementById('teacherform').style.display='none'">ADD TEAM</button>
 		
 		<div id="teacherform" class="form">
 			
 			<label>Subject: </label>
-			<input type="text" id="subject">
+			<input type="text" id="subject" onfocus="this.style.backgroundColor='Salmon'" onblur="this.style.backgroundColor='white', this.style.borderRadius='5px'">
 			<label>Teacher Name: </label>
-			<input type="text" id="name">
+			<input type="text" id="name" onfocus="this.style.backgroundColor='Salmon'" onblur="this.style.backgroundColor='white' , this.style.borderRadius='5px'">
 			<label>Cluster: </label>
-			<select id="cluster">
+			<select id="cluster" onfocus="this.style.backgroundColor='Salmon'" onblur="this.style.backgroundColor='white', this.style.borderRadius='5px'">
 				<option value="SAY">SAY</option>
 				<option value="SÖZ">SÖZ</option>
 				<option value="EA">EA</option>
@@ -90,14 +90,14 @@
 		<div id="sportsform" class="form">
 		
 		<label>Sports Type: </label>
-		<select id="sports">
+		<select id="sports" onfocus="this.style.backgroundColor='Salmon'" onblur="this.style.backgroundColor='white',this.style.borderRadius='5px'">
 			<option value="Football">Football</option>
 			<option value="Volleyball">Volleyball</option>
 			<option value="Sailing">Sailing</option>
 			<option value="Basketball">Basketball</option>
 		</select>
 		<label>Team Name: </label>
-		<input type="text" id="teamname">
+		<input type="text" id="teamname" onfocus="this.style.backgroundColor='Salmon'" onblur="this.style.backgroundColor='white',this.style.borderRadius='5px'">
 		
 		<button class="button" id="takimekle" >ADD</button>
 		
@@ -106,16 +106,16 @@
 		</div>
 		
 		<script>
-          const subject=document.getElementById("subject");
-          const name=document.getElementById("name");
-          const cluster=document.getElementById("cluster");
-          const hocaekle=document.getElementById("hocaekle");
-          const teachertable=document.getElementById("teachertable");
+          var subject=document.getElementById("subject");
+          var tname=document.getElementById("name");
+          var cluster=document.getElementById("cluster");
+          var hocaekle=document.getElementById("hocaekle");
+          var teachertable=document.getElementById("teachertable");
 
-          const sports=document.getElementById("sports");
-          const teamname=document.getElementById("teamname");
-          const takımekle=document.getElementById("takımekle");
-          const sportstable=document.getElementById("sportstable");
+          var sports=document.getElementById("sports");
+          var teamname=document.getElementById("teamname");
+          var takımekle=document.getElementById("takımekle");
+          var sportstable=document.getElementById("sportstable");
 
           hocaekle.onclick=function(){
 
@@ -124,7 +124,7 @@
             let tCluster=document.createElement("td");
 
             tSubject.textContent=subject.value;
-            tName.textContent=name.value;
+            tName.textContent=tname.value;
             tCluster.textContent=cluster.value;
 
             let tr=document.createElement("tr");
@@ -135,7 +135,7 @@
 
             teachertable.appendChild(tr);
 
-            name.value="";
+            tname.value="";
             subject.value="";
             cluster.value="";
             
@@ -162,6 +162,7 @@
             teamname.value="";
             
             document.getElementById("sportsform").style.display="none";
+            
           }
           
         </script>
